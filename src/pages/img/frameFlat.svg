@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="673.432" height="610.725" viewBox="0 0 673.432 610.725" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g transform="translate(-29.892 -45.892)">
+    <clipPath id="heart-mask">
+        <path d="M366.608,656.617,86.642,376.651c-75.665-75.666-75.665-198.344,0-274.01h0c75.666-75.665,198.344-75.665,274.01,0l5.957,5.957,5.957-5.957c75.666-75.665,198.344-75.665,274.01,0h0c75.665,75.666,75.665,198.344,0,274.01Z" transform="translate(0 0)" fill="#e04446"/>
+    </clipPath>
+    </g>
+    <image clip-path="url(#heart-mask)" height="100%" width="100%" xlink:href="IMG-0260.JPG" />
+</svg>
