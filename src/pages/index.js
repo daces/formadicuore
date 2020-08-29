@@ -24,7 +24,6 @@ import rec4 from "./img/testemonials/rec4.jpg"
 
 
 import Img from "gatsby-image"
-import { useEffect } from 'react'
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
