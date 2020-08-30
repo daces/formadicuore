@@ -11,16 +11,16 @@ import imggall3 from "../../src/pages/img/3.JPG"
 import imggall4 from "../../src/pages/img/IMG-0070.JPG"
 import imggall5 from "../../src/pages/img/IMG-0140.JPG"
 import imggall6 from "../../src/pages/img/IMG-0161.JPG"
-import imggall7 from "../../src/pages/img/IMG-0199.gif"
+import imggall7 from "../../src/pages/img/IMG-0199.GIF"
 import imggall8 from "../../src/pages/img/IMG-0227.JPG"
 import imggall9 from "../../src/pages/img/IMG-0293.JPG"
 import imggall10 from "../../src/pages/img/IMG-0307.JPG"
 
 
-import rec1 from "../../src/pages/img/testemonials/rec1.JPG"
-import rec2 from "../../src/pages/img/testemonials/rec2.JPG"
-import rec3 from "../../src/pages/img/testemonials/rec3.JPG"
-import rec4 from "../../src/pages/img/testemonials/rec4.JPG"
+import rec1 from "../../src/pages/img/testemonials/rec1.jpg"
+import rec2 from "../../src/pages/img/testemonials/rec2.jpg"
+import rec3 from "../../src/pages/img/testemonials/rec3.jpg"
+import rec4 from "../../src/pages/img/testemonials/rec4.jpg"
 
 
 import Img from "gatsby-image"
