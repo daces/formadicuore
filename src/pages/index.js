@@ -1,4 +1,6 @@
 import React from "react"
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { graphql, useStaticQuery,withPrefix, Link  } from "gatsby"
 import Helmet from "react-helmet"
 
@@ -24,29 +26,27 @@ import rec2 from "../../src/pages/img/testemonials/rec2.jpg"
 import rec3 from "../../src/pages/img/testemonials/rec3.jpg"
 import rec4 from "../../src/pages/img/testemonials/rec4.jpg"
 */
-const logoImage ;
-const logoImage1 ;
-const logoImage2 ;
+const logoImage ="";
+const logoImage1 ="";
+const logoImage2 ="";
 
-const imggall1 ;
-const imggall2 ;
-const imggall3 ;
-const imggall4 ;
-const imggall5 ;
-const imggall6 ;
-const imggall7 ;
-const imggall8 ;
-const imggall9 ;
-const imggall10 ;
+const imggall1 ="";
+const imggall2 ="";
+const imggall3 ="";
+const imggall4 ="";
+const imggall5 ="";
+const imggall6 ="";
+const imggall7 ="";
+const imggall8 ="";
+const imggall9 ="";
+const imggall10 ="";
 
 
-const rec1 ;
-const rec2 ;
-const rec3 ;
-const rec4 ;
+const rec1 ="";
+const rec2 ="";
+const rec3 ="";
+const rec4 ="";
 
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 
