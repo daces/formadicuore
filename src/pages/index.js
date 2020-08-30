@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql, useStaticQuery,withPrefix, Link  } from "gatsby"
 import Helmet from "react-helmet"
+
+/*
 import logoImage from "../../src/pages/img/2.JPG"
 import logoImage1 from "../../src/pages/img/1.JPG"
 import logoImage2 from "../../src/pages/img/3.JPG"
@@ -21,9 +23,27 @@ import rec1 from "../../src/pages/img/testemonials/rec1.jpg"
 import rec2 from "../../src/pages/img/testemonials/rec2.jpg"
 import rec3 from "../../src/pages/img/testemonials/rec3.jpg"
 import rec4 from "../../src/pages/img/testemonials/rec4.jpg"
+*/
+const logoImage ;
+const logoImage1 ;
+const logoImage2 ;
+
+const imggall1 ;
+const imggall2 ;
+const imggall3 ;
+const imggall4 ;
+const imggall5 ;
+const imggall6 ;
+const imggall7 ;
+const imggall8 ;
+const imggall9 ;
+const imggall10 ;
 
 
-import Img from "gatsby-image"
+const rec1 ;
+const rec2 ;
+const rec3 ;
+const rec4 ;
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
