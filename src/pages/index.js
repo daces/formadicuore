@@ -80,6 +80,7 @@ function Swiperzi() {
 };
 
 export default function Home() {
+  /*
   const imageFront1= useStaticQuery(graphql`
   query {
     desktop: file(relativePath: { eq: "1.JPG" }) {
@@ -91,7 +92,7 @@ export default function Home() {
     }
   }
 `)
-
+*/
   return <>
 
 
