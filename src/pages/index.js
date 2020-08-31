@@ -94,9 +94,20 @@ export default function Home() {
   }
 `)
 */
+ const imageFront1 = useStaticQuery(graphql`
+ query {
+   desktop: file(relativePath: { eq: "1.JPG" }) {
+     childImageSharp {
+       fluid(quality: 90, maxWidth: 1920) {
+         ...GatsbyImageSharpFluid_withWebp
+       }
+     }
+   }
+ }
+`)
   return <>
 
-
+{console.log( "works", imageFront1.desktop.childImageSharp.fluid)}
 <div className="container full-height loremipsum">
   <div className="row">
     <div className="menu">
@@ -128,7 +139,7 @@ export default function Home() {
           xmlnsXlink="http://www.w3.org/1999/xlink" width="1272.939" height="1103.442" viewBox="0 0 1272.939 1103.442">
           <defs>
             <pattern id="a" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 640 640">
-              <image width="640" height="640" xlinkHref="./img/1.jpg"/>
+              <image width="640" height="640" xlinkHref={imageFront1.desktop.childImageSharp.fluid.src}/>
               
               
             </pattern>
