@@ -26,11 +26,12 @@ import rec2 from "../../src/pages/img/testemonials/rec2.jpg"
 import rec3 from "../../src/pages/img/testemonials/rec3.jpg"
 import rec4 from "../../src/pages/img/testemonials/rec4.jpg"
 */
-const logoImage ="";
+import logoImage from "../pages/img/IMG-0307.JPG"
+import imggall1 from "../pages/img/IMG-0307.JPG"
 const logoImage1 ="";
 const logoImage2 ="";
 
-const imggall1 ="";
+//const imggall1 ="";
 const imggall2 ="";
 const imggall3 ="";
 const imggall4 ="";
