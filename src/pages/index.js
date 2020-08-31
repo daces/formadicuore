@@ -2,84 +2,18 @@ import React from "react"
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { graphql, useStaticQuery,withPrefix, Link  } from "gatsby"
-import Helmet from "react-helmet"
-
-/*
-import logoImage from "./img/2.jpg"
-import logoImage1 from "./img/1.jpg"
-import logoImage2 from "./img/3.jpg"
-
-import imggall1 from "./img/1.jpg"
-import imggall2 from "./img/2.jpg"
-import imggall3 from "./img/3.jpg"
-import imggall4 from "./img/IMG-0070.jpg"
-import imggall5 from "./img/IMG-0140.jpg"
-import imggall6 from "./img/IMG-0161.jpg"
-import imggall7 from "./img/IMG-0199.gif"
-import imggall8 from "./img/IMG-0227.jpg"
-import imggall9 from "./img/IMG-0293.jpg"
-import imggall10 from "./img/IMG-0307.jpg"
-
-
-import rec1 from "./img/testemonials/rec1.jpg"
-import rec2 from "./img/testemonials/rec2.jpg"
-import rec3 from "./img/testemonials/rec3.jpg"
-import rec4 from "./img/testemonials/rec4.jpg"
-
-*/
-const logoImage ="";
-const logoImage1 ="";
-const logoImage2 ="";
-
-const imggall1 ="";
-const imggall2 ="";
-const imggall3 ="";
-const imggall4 ="";
-const imggall5 ="";
-const imggall6 ="";
-const imggall7 ="";
-const imggall8 ="";
-const imggall9 ="";
-const imggall10 ="";
-
-
-const rec1 ="";
-const rec2 ="";
-const rec3 ="";
-const rec4 ="";
-
-
+import baggete from "baguettebox.js"
 // Import Swiper styles
 
-
-function Swiperzi() {
-  return (
-    <Swiper
-    slidesPerView={4}
-    spaceBetween={30} 
-    slidesOffsetBefore={0} 
-    preloadImages={true}
-    updateOnImagesReady={true}
-    centeredSlides={true}
-    centerInsufficientSlides={true}
-    pagination= {{
-      el: '.swiper-pagination',
-      clickable: true,
-}}
-    >
-      <SwiperSlide><img src={rec1} alt="Siema " /></SwiperSlide>
-      <SwiperSlide><img src={rec2} alt="Siema " /></SwiperSlide>
-      <SwiperSlide><img src={rec3} alt="Siema " /></SwiperSlide>
-      <SwiperSlide><img src={rec4} alt="Siema " /></SwiperSlide>
-      <SwiperSlide><img src={rec1} alt="Siema " /></SwiperSlide>
-      <SwiperSlide><img src={rec2} alt="Siema " /></SwiperSlide>
-      <SwiperSlide><img src={rec3} alt="Siema " /></SwiperSlide>
-      <SwiperSlide><img src={rec4} alt="Siema " /></SwiperSlide>
-      <SwiperSlide><img src={rec1} alt="Siema " /></SwiperSlide>
-    </Swiper>
-  );
-};
-
+export const squareImage = graphql`
+  fragment squareImage on File {
+    childImageSharp {
+      fluid(quality: 90, maxWidth: 1920) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
 export default function Home() {
   /*
   const imageFront1= useStaticQuery(graphql`
@@ -96,18 +30,92 @@ export default function Home() {
 */
  const imageFront1 = useStaticQuery(graphql`
  query {
-   desktop: file(relativePath: { eq: "1.JPG" }) {
-     childImageSharp {
-       fluid(quality: 90, maxWidth: 1920) {
-         ...GatsbyImageSharpFluid_withWebp
-       }
-     }
-   }
- }
+  logo: file(relativePath: { eq: "1.JPG" }) {
+    ...squareImage
+  }
+  img1: file(relativePath: { eq: "2.JPG" }) {
+    ...squareImage
+  }
+  img2: file(relativePath: { eq: "3.JPG" }) {
+    ...squareImage
+  }
+  rec1: file(relativePath: { eq: "testemonials/rec1.jpg" }) {
+    ...squareImage
+  }
+  rec2: file(relativePath: { eq: "testemonials/rec2.jpg" }) {
+    ...squareImage
+  }
+  rec3: file(relativePath: { eq: "testemonials/rec3.jpg" }) {
+    ...squareImage
+  }
+  rec4: file(relativePath: { eq: "testemonials/rec4.jpg" }) {
+    ...squareImage
+  }
+  gal1: file(relativePath: { eq: "1.JPG" }) {
+    ...squareImage
+  }
+  gal2: file(relativePath: { eq: "2.JPG" }) {
+    ...squareImage
+  }
+  gal3: file(relativePath: { eq: "3.JPG" }) {
+    ...squareImage
+  }
+  gal4: file(relativePath: { eq: "IMG-0070.JPG" }) {
+    ...squareImage
+  }
+  gal5: file(relativePath: { eq: "IMG-0140.JPG" }) {
+    ...squareImage
+  }
+  gal6: file(relativePath: { eq: "IMG-0161.JPG" }) {
+    ...squareImage
+  }
+  gal7: file(relativePath: { eq: "IMG-0307.JPG" }) {
+    ...squareImage
+  }
+  gal8: file(relativePath: { eq: "IMG-0227.JPG" }) {
+    ...squareImage
+  }
+  gal9: file(relativePath: { eq: "IMG-0293.JPG" }) {
+    ...squareImage
+  }
+
+}
 `)
+
+function Swiperzi() {
+  return (
+    <Swiper
+    slidesPerView={4}
+    spaceBetween={30} 
+    slidesOffsetBefore={0} 
+    preloadImages={true}
+    updateOnImagesReady={true}
+    centeredSlides={true}
+    centerInsufficientSlides={true}
+    pagination= {{
+      el: '.swiper-pagination',
+      clickable: true,
+}}
+    >
+      <SwiperSlide><img src={imageFront1.rec1.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
+      <SwiperSlide><img src={imageFront1.rec2.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
+      <SwiperSlide><img src={imageFront1.rec3.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
+      <SwiperSlide><img src={imageFront1.rec4.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
+      <SwiperSlide><img src={imageFront1.rec1.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
+      <SwiperSlide><img src={imageFront1.rec2.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
+      <SwiperSlide><img src={imageFront1.rec3.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
+      <SwiperSlide><img src={imageFront1.rec4.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
+      <SwiperSlide><img src={imageFront1.rec1.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
+      <SwiperSlide><img src={imageFront1.rec2.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
+      <SwiperSlide><img src={imageFront1.rec3.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
+      <SwiperSlide><img src={imageFront1.rec4.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
+    </Swiper>
+  );
+};
+
   return <>
 
-{console.log( "works", imageFront1.desktop.childImageSharp.fluid)}
+{console.log( "works", imageFront1.img1.childImageSharp.fluid.src)}
 <div className="container full-height loremipsum">
   <div className="row">
     <div className="menu">
@@ -139,7 +147,7 @@ export default function Home() {
           xmlnsXlink="http://www.w3.org/1999/xlink" width="1272.939" height="1103.442" viewBox="0 0 1272.939 1103.442">
           <defs>
             <pattern id="a" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 640 640">
-              <image width="640" height="640" xlinkHref={imageFront1.desktop.childImageSharp.fluid.src}/>
+              <image width="640" height="640" xlinkHref={imageFront1.img1.childImageSharp.fluid.src}/>
               
               
             </pattern>
@@ -151,7 +159,7 @@ export default function Home() {
               <feComposite in="SourceGraphic"/>
             </filter>
             <pattern id="d" width="1" height="1" viewBox="50.953 112.72 652.129 615.057">
-              <image preserveAspectRatio="xMidYMid slice" width="754.034" height="754.034" xlinkHref={logoImage1}/>
+              <image preserveAspectRatio="xMidYMid slice" width="754.034" height="754.034" xlinkHref={imageFront1.logo.childImageSharp.fluid.src}/>
             </pattern>
             <filter id="e" x="184.49" y="0" width="886.034" height="843.169" filterUnits="userSpaceOnUse">
               <feOffset dx="22" dy="-22" input="SourceAlpha"/>
@@ -161,7 +169,7 @@ export default function Home() {
               <feComposite in="SourceGraphic"/>
             </filter>
             <pattern id="g" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 640 640">
-              <image width="640" height="640" xlinkHref={logoImage2}/>
+              <image width="640" height="640" xlinkHref={imageFront1.img2.childImageSharp.fluid.src}/>
             </pattern>
             <filter id="h" x="553.268" y="406.111" width="719.671" height="697.331" filterUnits="userSpaceOnUse">
               <feOffset dx="22" dy="-22" input="SourceAlpha"/>
@@ -241,13 +249,13 @@ export default function Home() {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink" width="584.732" height="527.419" viewBox="0 100 584.732 527.419">
       <defs>
-        <pattern id="a" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 640 640">
-          <image width="640" height="640" xlinkHref="img/2.JPG"/>
+        <pattern id="xax" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 640 640">
+          <image width="640" height="640" xlinkHref={imageFront1.logo.childImageSharp.fluid.src}/>
         </pattern>
       </defs>
       <g transform="translate(-213.918 -150.381)">
         <g transform="matrix(1, 0, 0, 1, 213.92, 150.38)">
-          <path d="M38.151,214.153c-50.868-48.991-50.868-128.42,0-177.411s133.341-48.99,184.21,0l4,3.857,4-3.857c50.868-48.99,133.341-48.99,184.21,0s50.868,128.42,0,177.411L226.365,395.419Z" transform="translate(44 88)" fill="url(#a)"/>
+          <path d="M38.151,214.153c-50.868-48.991-50.868-128.42,0-177.411s133.341-48.99,184.21,0l4,3.857,4-3.857c50.868-48.99,133.341-48.99,184.21,0s50.868,128.42,0,177.411L226.365,395.419Z" transform="translate(44 88)" fill="url(#xax)"/>
         </g>
         <g transform="translate(257.78 228.38)">
           <path d="M3394.581,1449s-37.03-70.747-105.434-67.515c-31.192,1.474-56.924,11.263-76.784,26.809-23.156,18.125-37.85,44.361-42.721,73.845-8.954,54.2,13.937,109.675,78.3,166.9s38.107,33.125,77.964,71.1,69.481,80.725,69.481,80.725,11.109-18.919,55.275-64.432c17.257-17.1,38.983-39.331,68.135-63.556,106.78-88.737,103.279-148.253,101.663-180.57s-25.584-103.952-110.146-109.069S3394.581,1449,3394.581,1449Z" transform="translate(-3167.78 -1381.38)" fill="none" stroke="#fbd8d4" strokeWidth="28" opacity="0.67"/>
@@ -284,13 +292,13 @@ export default function Home() {
 	xmlns="http://www.w3.org/2000/svg"
 	xmlnsXlink="http://www.w3.org/1999/xlink" width="584.732" height="527.419" viewBox="0 100 584.732 527.419">
 	<defs>
-		<pattern id="a" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 640 640">
-			<image width="640" height="640" xlinkHref="img/2.JPG"/>
+		<pattern id="bax" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 640 640">
+			<image width="640" height="640" xlinkHref={imageFront1.img2.childImageSharp.fluid.src}/>
 		</pattern>
 	</defs>
 	<g transform="translate(-213.918 -150.381)">
 		<g transform="matrix(1, 0, 0, 1, 213.92, 150.38)">
-			<path d="M38.151,214.153c-50.868-48.991-50.868-128.42,0-177.411s133.341-48.99,184.21,0l4,3.857,4-3.857c50.868-48.99,133.341-48.99,184.21,0s50.868,128.42,0,177.411L226.365,395.419Z" transform="translate(44 88)" fill="url(#a)"/>
+			<path d="M38.151,214.153c-50.868-48.991-50.868-128.42,0-177.411s133.341-48.99,184.21,0l4,3.857,4-3.857c50.868-48.99,133.341-48.99,184.21,0s50.868,128.42,0,177.411L226.365,395.419Z" transform="translate(44 88)" fill="url(#bax)"/>
 		</g>
 		<g transform="translate(257.78 228.38)">
 			<path d="M3394.581,1449s-37.03-70.747-105.434-67.515c-31.192,1.474-56.924,11.263-76.784,26.809-23.156,18.125-37.85,44.361-42.721,73.845-8.954,54.2,13.937,109.675,78.3,166.9s38.107,33.125,77.964,71.1,69.481,80.725,69.481,80.725,11.109-18.919,55.275-64.432c17.257-17.1,38.983-39.331,68.135-63.556,106.78-88.737,103.279-148.253,101.663-180.57s-25.584-103.952-110.146-109.069S3394.581,1449,3394.581,1449Z" transform="translate(-3167.78 -1381.38)" fill="none" stroke="#fbd8d4" strokeWidth="28" opacity="0.67"/>
@@ -306,13 +314,13 @@ export default function Home() {
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink" width="584.732" height="527.419" viewBox="0 100 584.732 527.419">
     <defs>
-      <pattern id="a" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 640 640">
-        <image width="640" height="640" xlinkHref="img/2.JPG"/>
+      <pattern id="cax" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 640 640">
+        <image width="640" height="640" xlinkHref={imageFront1.img1.childImageSharp.fluid.src}/>
       </pattern>
     </defs>
     <g transform="translate(-213.918 -150.381)">
       <g transform="matrix(1, 0, 0, 1, 213.92, 150.38)">
-        <path d="M38.151,214.153c-50.868-48.991-50.868-128.42,0-177.411s133.341-48.99,184.21,0l4,3.857,4-3.857c50.868-48.99,133.341-48.99,184.21,0s50.868,128.42,0,177.411L226.365,395.419Z" transform="translate(44 88)" fill="url(#a)"/>
+        <path d="M38.151,214.153c-50.868-48.991-50.868-128.42,0-177.411s133.341-48.99,184.21,0l4,3.857,4-3.857c50.868-48.99,133.341-48.99,184.21,0s50.868,128.42,0,177.411L226.365,395.419Z" transform="translate(44 88)" fill="url(#cax)"/>
       </g>
       <g transform="translate(257.78 228.38)">
         <path d="M3394.581,1449s-37.03-70.747-105.434-67.515c-31.192,1.474-56.924,11.263-76.784,26.809-23.156,18.125-37.85,44.361-42.721,73.845-8.954,54.2,13.937,109.675,78.3,166.9s38.107,33.125,77.964,71.1,69.481,80.725,69.481,80.725,11.109-18.919,55.275-64.432c17.257-17.1,38.983-39.331,68.135-63.556,106.78-88.737,103.279-148.253,101.663-180.57s-25.584-103.952-110.146-109.069S3394.581,1449,3394.581,1449Z" transform="translate(-3167.78 -1381.38)" fill="none" stroke="#fbd8d4" strokeWidth="28" opacity="0.67"/>
@@ -344,49 +352,49 @@ export default function Home() {
 
       <div className="row">
           <div className="col-sm-6 col-md-4">
-              <a className="lightbox" href={imggall1}>
+              <a className="lightbox" href={imageFront1.gal1.childImageSharp.fluid.src}>
                 
-                  <img src={imggall1} alt="awd"/>
+                  <img src={imageFront1.gal1.childImageSharp.fluid.src} alt="awd"/>
               </a>
           </div>
           <div className="col-sm-6 col-md-4">
-              <a className="lightbox" href={imggall2}>
-                  <img src={imggall2} alt="awd"/>
+              <a className="lightbox" href={imageFront1.gal2.childImageSharp.fluid.src}>
+                  <img src={imageFront1.gal2.childImageSharp.fluid.src} alt="awd"/>
               </a>
           </div>
           <div className="col-sm-12 col-md-4">
-              <a className="lightbox" href={imggall3}>
-                  <img src={imggall3} alt="awd"/>
+              <a className="lightbox" href={imageFront1.gal3.childImageSharp.fluid.src}>
+                  <img src={imageFront1.gal3.childImageSharp.fluid.src} alt="awd"/>
               </a>
           </div>
           <div className="col-sm-6 col-md-4">
-              <a className="lightbox" href={imggall4}>
-                  <img src={imggall4} alt="awd"/>
+              <a className="lightbox" href={imageFront1.gal4.childImageSharp.fluid.src}>
+                  <img src={imageFront1.gal4.childImageSharp.fluid.src} alt="awd"/>
               </a>
           </div>
           <div className="col-sm-6 col-md-4">
-              <a className="lightbox" href={imggall5}>
-                  <img src={imggall5} alt="awd"/>
+              <a className="lightbox" href={imageFront1.gal5.childImageSharp.fluid.src}>
+                  <img src={imageFront1.gal5.childImageSharp.fluid.src} alt="awd"/>
               </a>
           </div>
           <div className="col-sm-6 col-md-4">
-              <a className="lightbox" href={imggall6}>
-                  <img src={imggall6} alt="awd"/>
+              <a className="lightbox" href={imageFront1.gal6.childImageSharp.fluid.src}>
+                  <img src={imageFront1.gal6.childImageSharp.fluid.src} alt="awd"/>
               </a>
           </div>
           <div className="col-sm-6 col-md-4">
-              <a className="lightbox" href={imggall7}>
-                  <img src={imggall7} alt="awd"/>
+              <a className="lightbox" href={imageFront1.gal7.childImageSharp.fluid.src}>
+                  <img src={imageFront1.gal7.childImageSharp.fluid.src} alt="awd"/>
               </a>
           </div>
           <div className="col-sm-6 col-md-4">
-              <a className="lightbox" href={imggall8}>
-                  <img src={imggall8} alt="awd"/>
+              <a className="lightbox" href={imageFront1.gal8.childImageSharp.fluid.src}>
+                  <img src={imageFront1.gal8.childImageSharp.fluid.src} alt="awd"/>
               </a>
           </div>
           <div className="col-sm-6 col-md-4">
-              <a className="lightbox" href={imggall10}>
-                  <img src={imggall10} alt="awd"/>
+              <a className="lightbox" href={imageFront1.gal9.childImageSharp.fluid.src}>
+                  <img src={imageFront1.gal9.childImageSharp.fluid.src} alt="awd"/>
               </a>
           </div>
       </div>
@@ -465,3 +473,4 @@ export default function Home() {
   </>
 
 }
+
