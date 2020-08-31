@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { graphql, useStaticQuery,withPrefix, Link  } from "gatsby"
 import Helmet from "react-helmet"
 
-
+/*
 import logoImage from "./img/2.jpg"
 import logoImage1 from "./img/1.jpg"
 import logoImage2 from "./img/3.jpg"
@@ -26,7 +26,7 @@ import rec2 from "./img/testemonials/rec2.jpg"
 import rec3 from "./img/testemonials/rec3.jpg"
 import rec4 from "./img/testemonials/rec4.jpg"
 
-/*
+*/
 const logoImage ="";
 const logoImage1 ="";
 const logoImage2 ="";
@@ -48,7 +48,7 @@ const rec2 ="";
 const rec3 ="";
 const rec4 ="";
 
-*/
+
 // Import Swiper styles
 
 
@@ -128,7 +128,7 @@ export default function Home() {
           xmlnsXlink="http://www.w3.org/1999/xlink" width="1272.939" height="1103.442" viewBox="0 0 1272.939 1103.442">
           <defs>
             <pattern id="a" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 640 640">
-              <image width="640" height="640" xlinkHref={logoImage}/>
+              <image width="640" height="640" xlinkHref="./img/1.jpg"/>
               
               
             </pattern>
