@@ -26,7 +26,7 @@ import rec2 from "../../src/pages/img/testemonials/rec2.jpg"
 import rec3 from "../../src/pages/img/testemonials/rec3.jpg"
 import rec4 from "../../src/pages/img/testemonials/rec4.jpg"
 */
-const logoImage ="";
+import logoImage from "../../src/pages/img/2.JPG"
 const logoImage1 ="";
 const logoImage2 ="";
 
@@ -387,7 +387,7 @@ export default function Home() {
 <div className="container-fluid ">
   <div className="row">
     <div className="col-md-12">
-      <h1 className="gallery-grid__title">cosa dicono di noi su Instagram</h1>
+      <h1 className="gallery-grid__title">cosa dicono di noi</h1>
       <p className="testimonials__counter">(12 testimonianze)</p>
     </div>
   </div>
