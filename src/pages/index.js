@@ -4,34 +4,34 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { graphql, useStaticQuery,withPrefix, Link  } from "gatsby"
 import Helmet from "react-helmet"
 
+
+import logoImage from "./img/2.jpg"
+import logoImage1 from "./img/1.jpg"
+import logoImage2 from "./img/3.jpg"
+
+import imggall1 from "./img/1.jpg"
+import imggall2 from "./img/2.jpg"
+import imggall3 from "./img/3.jpg"
+import imggall4 from "./img/IMG-0070.jpg"
+import imggall5 from "./img/IMG-0140.jpg"
+import imggall6 from "./img/IMG-0161.jpg"
+import imggall7 from "./img/IMG-0199.gif"
+import imggall8 from "./img/IMG-0227.jpg"
+import imggall9 from "./img/IMG-0293.jpg"
+import imggall10 from "./img/IMG-0307.jpg"
+
+
+import rec1 from "./img/testemonials/rec1.jpg"
+import rec2 from "./img/testemonials/rec2.jpg"
+import rec3 from "./img/testemonials/rec3.jpg"
+import rec4 from "./img/testemonials/rec4.jpg"
+
 /*
-import logoImage from "../../src/pages/img/2.JPG"
-import logoImage1 from "../../src/pages/img/1.JPG"
-import logoImage2 from "../../src/pages/img/3.JPG"
-
-import imggall1 from "../../src/pages/img/1.JPG"
-import imggall2 from "../../src/pages/img/2.JPG"
-import imggall3 from "../../src/pages/img/3.JPG"
-import imggall4 from "../../src/pages/img/IMG-0070.JPG"
-import imggall5 from "../../src/pages/img/IMG-0140.JPG"
-import imggall6 from "../../src/pages/img/IMG-0161.JPG"
-import imggall7 from "../../src/pages/img/IMG-0199.GIF"
-import imggall8 from "../../src/pages/img/IMG-0227.JPG"
-import imggall9 from "../../src/pages/img/IMG-0293.JPG"
-import imggall10 from "../../src/pages/img/IMG-0307.JPG"
-
-
-import rec1 from "../../src/pages/img/testemonials/rec1.jpg"
-import rec2 from "../../src/pages/img/testemonials/rec2.jpg"
-import rec3 from "../../src/pages/img/testemonials/rec3.jpg"
-import rec4 from "../../src/pages/img/testemonials/rec4.jpg"
-*/
-import logoImage from "../pages/img/IMG-0307.JPG"
-import imggall1 from "../pages/img/IMG-0307.JPG"
+const logoImage ="";
 const logoImage1 ="";
 const logoImage2 ="";
 
-//const imggall1 ="";
+const imggall1 ="";
 const imggall2 ="";
 const imggall3 ="";
 const imggall4 ="";
@@ -48,7 +48,7 @@ const rec2 ="";
 const rec3 ="";
 const rec4 ="";
 
-
+*/
 // Import Swiper styles
 
 
