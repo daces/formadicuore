@@ -26,7 +26,7 @@ import rec2 from "../../src/pages/img/testemonials/rec2.jpg"
 import rec3 from "../../src/pages/img/testemonials/rec3.jpg"
 import rec4 from "../../src/pages/img/testemonials/rec4.jpg"
 */
-import logoImage from "../../src/pages/img/2.JPG"
+const logoImage ="";
 const logoImage1 ="";
 const logoImage2 ="";
 
