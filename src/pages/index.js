@@ -487,8 +487,8 @@ function Swiperzi() {
                     baguetteBox.run('.tz-gallery'); 
                   }
                 }
-                window.addEventListener('DOMContentLoaded', (event) => {
-                  baguetteBox.run('.tz-gallery'); 
+                document.addEventListener('DOMContentLoaded', (event) => {
+                  baguetteBox.run('.tz-gallery');
               });`,
           }}
         />
