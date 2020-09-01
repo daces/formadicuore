@@ -487,9 +487,11 @@ function Swiperzi() {
                     baguetteBox.run('.tz-gallery'); 
                   }
                 }
-                document.addEventListener('DOMContentLoaded', (event) => {
-                  baguetteBox.run('.tz-gallery');
-              });`,
+                if (document.readyState === 'loading') {  // Loading hasn't finished yet
+                  document.addEventListener('DOMContentLoaded', (event) => {
+                    baguetteBox.run('.tz-gallery');
+                  });
+                }`,
           }}
         />
         <script
