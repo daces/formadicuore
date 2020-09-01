@@ -488,7 +488,8 @@ function Swiperzi() {
               }
               else if(event.target.readyState === 'complete') {
                 baguetteBox.run('.tz-gallery');
-              })
+              }
+            })
               window.addEventListener('DOMContentLoaded', (event) => {
                 baguetteBox.run('.tz-gallery');
               });
