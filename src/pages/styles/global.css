@@ -10,7 +10,8 @@
    font-size: 16px;
    margin: 0;
    padding: 0;
-   font: 400 15px/1.8 "Fragmentcore", sans-serif;
+   font-family: cursive;
+   font: 400 15px/1.8 "Fragmentcore", cursive, sans-serif;
    color: #202020;
  }
  img {
@@ -25,7 +26,10 @@
  .menu {
    z-index: 2;
  }
- .menu__logo { padding-inline-start: 0;}
+ .menu__logo { 
+   display: inline-block;
+   padding-inline-start: 0;
+  }
  .menu__logo-small{
    width: 40px;
    height: 40px;
@@ -293,6 +297,23 @@
  .qualities__text {
    margin-top: -80px;
    margin-bottom: 40px;
+ }
+ .menu, 
+ .menu__logo, 
+ .menu__logo li {
+   display: block;
+   width: 100%;
+ }
+ .menu__logo li {
+  padding-bottom: 1em;
+  font-size: 1.25em;
+  font-weight: bold;
+ }
+ .menu__logo li a{
+  padding-left: 0;
+ }
+ .is_hidden {
+   display: none;
  }
  }
  @media (min-width: 768px){
