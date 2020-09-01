@@ -1,9 +1,14 @@
 import React from "react"
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { graphql, useStaticQuery,withPrefix, Link  } from "gatsby"
-import baggete from "baguettebox.js"
-// Import Swiper styles
+import { graphql, useStaticQuery } from "gatsby"
+import SwiperCore, { Navigation, Pagination } from 'swiper';
+import Helmet from "react-helmet"
+import { withPrefix } from "gatsby"
+
+
+// install Swiper components
+SwiperCore.use([Navigation, Pagination]);
 
 export const squareImage = graphql`
   fragment squareImage on File {
@@ -15,19 +20,6 @@ export const squareImage = graphql`
   }
 `
 export default function Home() {
-  /*
-  const imageFront1= useStaticQuery(graphql`
-  query {
-    desktop: file(relativePath: { eq: "1.JPG" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 1920) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`)
-*/
  const imageFront1 = useStaticQuery(graphql`
  query {
   logo: file(relativePath: { eq: "1.JPG" }) {
@@ -84,18 +76,31 @@ export default function Home() {
 
 function Swiperzi() {
   return (
+    <>
     <Swiper
-    slidesPerView={4}
-    spaceBetween={30} 
-    slidesOffsetBefore={0} 
+    initialSlide={0}
+    spaceBetween={20}
+    slidesOffsetBefore={-50}
     preloadImages={true}
     updateOnImagesReady={true}
     centeredSlides={true}
+    centeredSlidesBounds={true}
     centerInsufficientSlides={true}
-    pagination= {{
-      el: '.swiper-pagination',
-      clickable: true,
-}}
+    breakpoints={{
+      320:{
+        slidesPerView: 1,
+        spaceBetween: 20,
+        slidesOffsetBefore: -40,
+      },
+        520:{
+          slidesPerView: 5,
+          spaceBetween: 30,
+          slidesOffsetBefore:0,
+        }}}
+      pagination={{
+          el: '.swiper-pagination',
+          dynamicBullets: true,
+        }}
     >
       <SwiperSlide><img src={imageFront1.rec1.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
       <SwiperSlide><img src={imageFront1.rec2.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
@@ -109,13 +114,17 @@ function Swiperzi() {
       <SwiperSlide><img src={imageFront1.rec2.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
       <SwiperSlide><img src={imageFront1.rec3.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
       <SwiperSlide><img src={imageFront1.rec4.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
+      <div className="swiper-pagination"></div>
     </Swiper>
+    </>
   );
 };
 
   return <>
-
-{console.log( "works", imageFront1.img1.childImageSharp.fluid.src)}
+    <Helmet>
+        <script src={withPrefix('baguetteBox.min.js')} type="text/javascript" />
+    </Helmet>
+{console.log( "works", imageFront1.img1.childImageSharp.fluid)}
 <div className="container full-height loremipsum">
   <div className="row">
     <div className="menu">
@@ -217,7 +226,7 @@ function Swiperzi() {
         </p>
           <div className="social">
           
-            <a href="https://www.instagram.com/loremipsum/" target="_blank" rel="noreferrer">
+            <a href="https://www.instagram.com/aformadicuore/" target="_blank" rel="noreferrer">
               <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="svg-inline--fa fa-instagram fa-w-14 fa-3x"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" className=""></path></svg>
             </a>
             <a href="/" target="_blank">
@@ -431,7 +440,7 @@ function Swiperzi() {
           <a href="/">Shop</a>
           <a href="/">About</a>
           <a href="/">Contact</a>
-          <a href="/"></a>
+          <a href="/">Location</a>
         </li>
       </ul>
     </div>
@@ -453,7 +462,7 @@ function Swiperzi() {
           <a href="/">Facebook</a>
           <a href="/">Instagram</a>
           <a href="/">Email</a>
-          <a href="/"></a>
+          <a href="/">Shop</a>
         </li>
       </ul>
     </div>
@@ -469,7 +478,13 @@ function Swiperzi() {
     <span>Secure Payments</span>
   </div>
 </div>
-
+<script
+          dangerouslySetInnerHTML={{
+            __html: `window.addEventListener('load', function() {
+              baguetteBox.run('.tz-gallery')
+            });`,
+          }}
+        />
   </>
 
 }

@@ -3,8 +3,3 @@ import "./src/pages/styles/baguetteBox.min.css"
 import "./src/pages/styles/fluid-gallery.css"
 import "./src/pages/styles/global.css"
 import "./src/pages/styles/swiper-bundle.min.css"
-import React from 'react'
-export function onInitialClientRender() {
-   
- 
-  }

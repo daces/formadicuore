@@ -11,7 +11,6 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <script src="./js/baguetteBox.min.js" type="text/javascript" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
@@ -25,11 +24,7 @@ export default function HTML(props) {
         {props.postBodyComponents}
         
        
-            <script
-          dangerouslySetInnerHTML={{
-            __html: `baguetteBox.run('.tz-gallery');`,
-          }}
-        />
+
       </body>
     </html>
   )
