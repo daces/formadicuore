@@ -484,13 +484,12 @@ function Swiperzi() {
           dangerouslySetInnerHTML={{
             __html: `if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
                   if(/loaded|complete/.test(document.readyState)){
-                      clearInterval(_timer)
-                      walkmydog() // call target function
+                    baguetteBox.run('.tz-gallery'); 
                   }
                 }
-            window.onload = function () { 
-              baguetteBox.run('.tz-gallery'); 
-            };`,
+                window.addEventListener('DOMContentLoaded', (event) => {
+                  baguetteBox.run('.tz-gallery'); 
+              });`,
           }}
         />
         <script
