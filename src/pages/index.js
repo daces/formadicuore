@@ -482,8 +482,8 @@ function Swiperzi() {
 </div>
 <script
           dangerouslySetInnerHTML={{
-            __html: `document.addEventListener('readystatechange', function() {
-              if(document.readyState === "complete"){
+            __html: `document.addEventListener('readystatechange', function(event) {
+              if (event.target.readyState === 'complete') {
                 baguetteBox.run('.tz-gallery');
               }
               })`,
