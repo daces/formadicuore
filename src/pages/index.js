@@ -482,16 +482,9 @@ function Swiperzi() {
 </div>
 <script
           dangerouslySetInnerHTML={{
-            __html: `if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
-                  if(/loaded|complete/.test(document.readyState)){
-                    baguetteBox.run('.tz-gallery'); 
-                  }
-                }
-                if (document.readyState === 'loading') {  // Loading hasn't finished yet
-                  document.addEventListener('DOMContentLoaded', (event) => {
-                    baguetteBox.run('.tz-gallery');
-                  });
-                }`,
+            __html: `window.addEventListener('load', (event) => {
+              baguetteBox.run('.tz-gallery');
+            });`,
           }}
         />
         <script
