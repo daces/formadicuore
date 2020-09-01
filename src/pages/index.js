@@ -482,18 +482,12 @@ function Swiperzi() {
 </div>
 <script
           dangerouslySetInnerHTML={{
-            __html: `document.addEventListener('readystatechange', function(event) {
-              if (document.readyState === 'complete') {
-                baguetteBox.run('.tz-gallery');
-              }
-              else if(event.target.readyState === 'complete') {
-                baguetteBox.run('.tz-gallery');
-              }
-            })
-              window.addEventListener('DOMContentLoaded', (event) => {
-                baguetteBox.run('.tz-gallery');
-              });
-            
+            __html: `if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
+                  if(/loaded|complete/.test(document.readyState)){
+                      clearInterval(_timer)
+                      walkmydog() // call target function
+                  }
+                }
             window.onload = function () { 
               baguetteBox.run('.tz-gallery'); 
             };`,
