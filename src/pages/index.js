@@ -483,21 +483,19 @@ function Swiperzi() {
 <script
           dangerouslySetInnerHTML={{
             __html: `document.addEventListener('readystatechange', function(event) {
-              document.addEventListener('DOMContentLoaded', function(e) {
-                baguetteBox.run('.tz-gallery');
-            });
               if (document.readyState === 'complete') {
                 baguetteBox.run('.tz-gallery');
               }
               else if(event.target.readyState === 'complete') {
                 baguetteBox.run('.tz-gallery');
-              }
-              else {
-                window.onload = function () { 
-                  baguetteBox.run('.tz-gallery'); 
-                };
-              }
-              })`,
+              })
+              window.addEventListener('DOMContentLoaded', (event) => {
+                baguetteBox.run('.tz-gallery');
+              });
+            
+            window.onload = function () { 
+              baguetteBox.run('.tz-gallery'); 
+            };`,
           }}
         />
         <script
