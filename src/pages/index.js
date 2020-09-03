@@ -522,13 +522,13 @@ const gallery_options = {
     backgroundColor: 'rgba(30,30,36,0.8)',
     iconColor: 'rgba(255, 255, 255, 0.8)',
     iconPadding: '5px',
-    showAutoplayButton: true,
+    showAutoplayButton: false,
     showCloseButton: true,
-    showDownloadButton: true,
-    showFullscreenButton: true,
+    showDownloadButton: false,
+    showFullscreenButton: false,
     showNextButton: true,
     showPrevButton: true,
-    showThumbnailsButton: true,
+    showThumbnailsButton: false,
     size: '40px'
   },
   thumbnails: {
@@ -544,4 +544,5 @@ const gallery_options = {
   progressBar: {
     showProgressBar: false
   }
+
 }
