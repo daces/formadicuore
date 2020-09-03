@@ -146,6 +146,9 @@
      border-bottom: 1px solid grey;
      text-transform: lowercase;
  }
+ .gallery__box {
+   padding: 15px;
+ }
  .qualities svg{
    width: 420px;
    height: 600px;

@@ -121,7 +121,10 @@ function Swiperzi() {
 };
 
   return <>
-{console.log( "works", imageFront1)}
+    <Helmet>
+        <script src={withPrefix('baguetteBox.min.js')} type="text/javascript" />
+    </Helmet>
+{console.log( "works", imageFront1.img1.childImageSharp.fluid)}
 <div className="container full-height loremipsum">
   <div className="row">
     <div className="menu">
@@ -357,64 +360,62 @@ function Swiperzi() {
 
   <SimpleReactLightbox>
     <div className="gallery__main">
-    <SRLWrapper options={gallery_options}>
-    <div className="row">
-          <div className="col-md-6 col-12 gallery__box">
-              <a className="lightbox" href={imageFront1.gal1.childImageSharp.fluid.src}>
-                  <img srcSet={imageFront1.gal1.childImageSharp.fluid.srcSet}
-                  sizes={imageFront1.gal1.childImageSharp.fluid.sizes}
-                  src={imageFront1.gal1.childImageSharp.fluid.src} alt="awd"/>
-              </a>
-          </div>
-          <div className="col-md-6 col-12 gallery__box">
-              <a className="lightbox" href={imageFront1.gal2.childImageSharp.fluid.src}>
-                  <img srcSet={imageFront1.gal2.childImageSharp.fluid.srcSet}
-                  sizes={imageFront1.gal2.childImageSharp.fluid.sizes}
-                  src={imageFront1.gal2.childImageSharp.fluid.src} alt="awd"/>
-              </a>
-          </div>
-          <div className="col-md-4 col-12 gallery__box">
-              <a className="lightbox" href={imageFront1.gal3.childImageSharp.fluid.src}>
-                  <img srcSet={imageFront1.gal3.childImageSharp.fluid.srcSet}
-                  sizes={imageFront1.gal3.childImageSharp.fluid.sizes}
-                  src={imageFront1.gal3.childImageSharp.fluid.src} alt="awd"/>
-              </a>
-          </div>
-          <div className="col-md-4 col-12 gallery__box">
-              <a className="lightbox" href={imageFront1.gal4.childImageSharp.fluid.src}>
-                  <img srcSet={imageFront1.gal4.childImageSharp.fluid.srcSet}
-                  sizes={imageFront1.gal4.childImageSharp.fluid.sizes}
-                  src={imageFront1.gal4.childImageSharp.fluid.src} alt="awd"/>
-              </a>
-          </div>
-          <div className="col-md-4 col-12 gallery__box">
-              <a className="lightbox" href={imageFront1.gal5.childImageSharp.fluid.src}>
-                  <img srcSet={imageFront1.gal5.childImageSharp.fluid.srcSet}
-                  sizes={imageFront1.gal5.childImageSharp.fluid.sizes}
-                  src={imageFront1.gal5.childImageSharp.fluid.src} alt="awd"/>
-              </a>
-          </div>
-          <div className="col-md-6 col-12 gallery__box">
-              <a className="lightbox" href={imageFront1.gal6.childImageSharp.fluid.src}>
-                  <img srcSet={imageFront1.gal6.childImageSharp.fluid.srcSet}
-                  sizes={imageFront1.gal6.childImageSharp.fluid.sizes}
-                  src={imageFront1.gal6.childImageSharp.fluid.src} alt="awd"/>
-              </a>
-          </div>
-          <div className="col-md-6 col-12 gallery__box">
-              <a className="lightbox" href={imageFront1.gal7.childImageSharp.fluid.src}>
-                  <img srcSet={imageFront1.gal7.childImageSharp.fluid.srcSet}
-                  sizes={imageFront1.gal7.childImageSharp.fluid.sizes}
-                  src={imageFront1.gal7.childImageSharp.fluid.src} alt="awd"/>
-              </a>
-          </div>
-      </div>
+    <SRLWrapper>
+
     </SRLWrapper>
     </div>
   </SimpleReactLightbox>
    
   <div className="tz-gallery">
 
+      <div className="row">
+          <div className="col-sm-6 col-md-4">
+              <a className="lightbox" href={imageFront1.gal1.childImageSharp.fluid.src}>
+                
+                  <img src={imageFront1.gal1.childImageSharp.fluid.src} alt="awd"/>
+              </a>
+          </div>
+          <div className="col-sm-6 col-md-4">
+              <a className="lightbox" href={imageFront1.gal2.childImageSharp.fluid.src}>
+                  <img src={imageFront1.gal2.childImageSharp.fluid.src} alt="awd"/>
+              </a>
+          </div>
+          <div className="col-sm-12 col-md-4">
+              <a className="lightbox" href={imageFront1.gal3.childImageSharp.fluid.src}>
+                  <img src={imageFront1.gal3.childImageSharp.fluid.src} alt="awd"/>
+              </a>
+          </div>
+          <div className="col-sm-6 col-md-4">
+              <a className="lightbox" href={imageFront1.gal4.childImageSharp.fluid.src}>
+                  <img src={imageFront1.gal4.childImageSharp.fluid.src} alt="awd"/>
+              </a>
+          </div>
+          <div className="col-sm-6 col-md-4">
+              <a className="lightbox" href={imageFront1.gal5.childImageSharp.fluid.src}>
+                  <img src={imageFront1.gal5.childImageSharp.fluid.src} alt="awd"/>
+              </a>
+          </div>
+          <div className="col-sm-6 col-md-4">
+              <a className="lightbox" href={imageFront1.gal6.childImageSharp.fluid.src}>
+                  <img src={imageFront1.gal6.childImageSharp.fluid.src} alt="awd"/>
+              </a>
+          </div>
+          <div className="col-sm-6 col-md-4">
+              <a className="lightbox" href={imageFront1.gal7.childImageSharp.fluid.src}>
+                  <img src={imageFront1.gal7.childImageSharp.fluid.src} alt="awd"/>
+              </a>
+          </div>
+          <div className="col-sm-6 col-md-4">
+              <a className="lightbox" href={imageFront1.gal8.childImageSharp.fluid.src}>
+                  <img src={imageFront1.gal8.childImageSharp.fluid.src} alt="awd"/>
+              </a>
+          </div>
+          <div className="col-sm-6 col-md-4">
+              <a className="lightbox" href={imageFront1.gal9.childImageSharp.fluid.src}>
+                  <img src={imageFront1.gal9.childImageSharp.fluid.src} alt="awd"/>
+              </a>
+          </div>
+      </div>
 
   </div>
 
@@ -486,6 +487,13 @@ function Swiperzi() {
     <span>Secure Payments</span>
   </div>
 </div>
+<script
+          dangerouslySetInnerHTML={{
+            __html: `window.addEventListener('load', (event) => {
+              baguetteBox.run('.tz-gallery');
+            });`,
+          }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -517,31 +525,3 @@ function Swiperzi() {
 
 }
 
-const gallery_options = {
-  buttons: {
-    backgroundColor: 'rgba(30,30,36,0.8)',
-    iconColor: 'rgba(255, 255, 255, 0.8)',
-    iconPadding: '5px',
-    showAutoplayButton: true,
-    showCloseButton: true,
-    showDownloadButton: true,
-    showFullscreenButton: true,
-    showNextButton: true,
-    showPrevButton: true,
-    showThumbnailsButton: true,
-    size: '40px'
-  },
-  thumbnails: {
-    showThumbnails: true,
-    thumbnailsAlignment: 'center',
-    thumbnailsContainerBackgroundColor: 'transparent',
-    thumbnailsContainerPadding: '0',
-    thumbnailsGap: '1px',
-    thumbnailsOpacity: 0.4,
-    thumbnailsPosition: 'bottom',
-    thumbnailsSize: ['100px', '80px']
-  },
-  progressBar: {
-    showProgressBar: false
-  }
-}
