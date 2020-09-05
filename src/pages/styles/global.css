@@ -378,3 +378,62 @@ body {
   position: relative;
   height: 100%;
 }
+
+.dblock {display: block;}
+
+form label{
+  font-size: 1.25rem;
+}
+.form {
+  padding: 5px 0 5px 10px;
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.25rem;
+  line-height: 2;
+  margin: 0;
+  font-family: inherit;
+  width: 100%;
+  background: #ffe5e2;
+}
+.contact_main label {
+  width: 100%;
+  margin-top: 20px;
+  display: block;
+  position: relative;
+}
+.contact_main label:first-of-type {
+  margin-right: 6%;
+}
+.contact_main label:last-of-type {
+  width: 100%;
+  display: inline-block;
+  margin-top: 30px;
+}
+.contact_main  {
+  width: 50%;
+  display: block;
+  margin: auto;
+}
+.contact_main .submit-btn {
+  font-weight: bold;
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  font-family: inherit;
+  text-transform: uppercase;
+  border-radius: 4px;
+  letter-spacing: 2px;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  margin: 32px 0;
+}
+.contact_main_button {
+  text-align: center;
+}
+.contact_main textarea {
+  height: 200px;
+}

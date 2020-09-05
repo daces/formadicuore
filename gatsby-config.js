@@ -6,6 +6,12 @@
 const path = require(`path`)
 
 module.exports = {
+  siteMetadata: {
+    title: "aformadicuore",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a posuere urna. Donec a nibh nec libero accumsan lacinia.",
+    url: "https://aformadicuore.it",
+    instagramUsername: "@aformadicuore"
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
