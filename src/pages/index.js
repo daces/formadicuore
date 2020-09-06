@@ -127,7 +127,6 @@ function Swiperzi() {
 
   return <>
   <SEO />
-{console.log( "works", imageFront1)}
 <div className="container full-height loremipsum">
   <Menu/>
   <div className="row full-height">
@@ -157,7 +156,7 @@ function Swiperzi() {
     img7={imageFront1.gal7.childImageSharp.fluid} 
   />
 </div>
-<div className="container-fluid ">
+<div id="testimonials" className="container-fluid ">
   <div className="row">
     <div className="col-md-12">
       <h1 className="gallery-grid__title">cosa dicono di noi</h1>

@@ -1,4 +1,6 @@
 import React from "react"
+import { Link } from "gatsby"
+
 export default function Menu () {
     return (
         <div className="row">
@@ -15,9 +17,9 @@ export default function Menu () {
             </li>
             </ul>
             <ul className="menu__logo menu__sub is_hidden">
-              <li><a href="/">Home</a></li>
-              <li><a href="/">About</a></li>
-              <li><a href="/">Testemonials</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><a href="#testimonials">Testemonials</a></li>
             </ul>
         </div>
         

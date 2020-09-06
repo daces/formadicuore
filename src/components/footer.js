@@ -42,8 +42,8 @@ export default function Footer(){
     <div className="col-md-4 text-left">
       <h2 className="footer__title">Let`s stay in touch</h2>
       <p>Sign up for new fiocchi every day.</p>
-      <input type="text"/>
-      <button>Sign up</button>
+      <input className="footer__input" type="text"/>
+      <button className="submit-btn">Sign up</button>
     </div>
   </div>
   <div className="footer__copyright">
