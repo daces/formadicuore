@@ -26,7 +26,7 @@ export default function Menu () {
     }
     window.addEventListener("click", handleClick, false)
     return ( () =>{
-      window.removeEventListener("click", handleClick)
+      window.removeEventListener("click", handleClick, false)
     })
   })
 

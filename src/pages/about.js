@@ -44,33 +44,6 @@ query{
                 </div>
             </div>
         </div>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            var menu = document.querySelector(".menu__sub");
-            var navigation = document.querySelector(".menu__main");
-            
-            function handleClick(evt) {
-              // Only if a click on a dropdown trigger happens, either close or open it.
-              if (evt.target.hasAttribute("data-dropdown-trigger")) {
-                if (menu.classList.contains("is_hidden")) {
-                  menu.classList.remove("is_hidden");
-                } else {
-                  menu.classList.add("is_hidden");
-                }
-                
-                return;
-              }
-              
-              // If a click happens somewhere outside the dropdown, close it.
-              if (!evt.target.closest(".menu__sub")) {
-                menu.classList.add("is_hidden");
-              }
-            }
-            
-            window.addEventListener("click", handleClick);`,
-          }}
-        />
         </>
     )
 }
