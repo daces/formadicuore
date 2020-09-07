@@ -18,6 +18,9 @@
    font: 400 15px/1.8 "Fragmentcore", cursive, sans-serif;
    color: #202020;
  }
+ nav {
+   display: inline-block;
+ }
  figure {
    margin: 0;
    padding: 0;
