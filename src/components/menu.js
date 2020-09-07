@@ -51,7 +51,6 @@ export default function Menu () {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about/">About</Link></li>
               <li><a href="#testimonials">Testemonials</a></li>
-              <li><a href="/about/">About</a></li>
             </ul>
             </nav>
         </div>
