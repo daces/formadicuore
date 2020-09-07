@@ -2,8 +2,7 @@ import React from "react"
 
 export default function Footer(){
     return (
-        <>
-
+<footer>
 <p className="footer__logo"><span>loremipsum</span></p>
   <div className="row text-center">
     <div className="col">
@@ -50,6 +49,6 @@ export default function Footer(){
     <span>C 2020, A Forma Di Cuore, All rights Reserved</span>
     <span>Secure Payments</span>
   </div>
-        </>
+</footer>
     )
 }

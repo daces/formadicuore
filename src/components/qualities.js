@@ -1,7 +1,7 @@
 import React from "react"
 export default function Qualities(props){
     return (
-        <>
+        <section>
         <div className="row">
         <div className="col-md-12">
           <h1 className="gallery-grid__title ">perché scegliere noi</h1>
@@ -102,6 +102,6 @@ export default function Qualities(props){
           </div>
         </div>
       </div>
-      </>
+      </section>
     )
 }

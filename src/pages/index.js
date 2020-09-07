@@ -3,7 +3,6 @@ import { graphql, useStaticQuery } from "gatsby"
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
-import Helmet from "react-helmet"
 import Menu from "../components/menu"
 import Intro from "../components/intro"
 import Qualities from "../components/qualities"
@@ -107,18 +106,18 @@ function Swiperzi() {
           dynamicBullets: true,
         }}
     >
-      <SwiperSlide><img src={imageFront1.rec1.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
-      <SwiperSlide><img src={imageFront1.rec2.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
-      <SwiperSlide><img src={imageFront1.rec3.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
-      <SwiperSlide><img src={imageFront1.rec4.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
-      <SwiperSlide><img src={imageFront1.rec1.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
-      <SwiperSlide><img src={imageFront1.rec2.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
-      <SwiperSlide><img src={imageFront1.rec3.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
-      <SwiperSlide><img src={imageFront1.rec4.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
-      <SwiperSlide><img src={imageFront1.rec1.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
-      <SwiperSlide><img src={imageFront1.rec2.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
-      <SwiperSlide><img src={imageFront1.rec3.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
-      <SwiperSlide><img src={imageFront1.rec4.childImageSharp.fluid.src} alt="Siema " /></SwiperSlide>
+      <SwiperSlide><figure><img src={imageFront1.rec1.childImageSharp.fluid.src} alt="Siema " /></figure></SwiperSlide>
+      <SwiperSlide><figure><img src={imageFront1.rec2.childImageSharp.fluid.src} alt="Siema " /></figure></SwiperSlide>
+      <SwiperSlide><figure><img src={imageFront1.rec3.childImageSharp.fluid.src} alt="Siema " /></figure></SwiperSlide>
+      <SwiperSlide><figure><img src={imageFront1.rec4.childImageSharp.fluid.src} alt="Siema " /></figure></SwiperSlide>
+      <SwiperSlide><figure><img src={imageFront1.rec1.childImageSharp.fluid.src} alt="Siema " /></figure></SwiperSlide>
+      <SwiperSlide><figure><img src={imageFront1.rec2.childImageSharp.fluid.src} alt="Siema " /></figure></SwiperSlide>
+      <SwiperSlide><figure><img src={imageFront1.rec3.childImageSharp.fluid.src} alt="Siema " /></figure></SwiperSlide>
+      <SwiperSlide><figure><img src={imageFront1.rec4.childImageSharp.fluid.src} alt="Siema " /></figure></SwiperSlide>
+      <SwiperSlide><figure><img src={imageFront1.rec1.childImageSharp.fluid.src} alt="Siema " /></figure></SwiperSlide>
+      <SwiperSlide><figure><img src={imageFront1.rec2.childImageSharp.fluid.src} alt="Siema " /></figure></SwiperSlide>
+      <SwiperSlide><figure><img src={imageFront1.rec3.childImageSharp.fluid.src} alt="Siema " /></figure></SwiperSlide>
+      <SwiperSlide><figure><img src={imageFront1.rec4.childImageSharp.fluid.src} alt="Siema " /></figure></SwiperSlide>
       <div className="swiper-pagination"></div>
     </Swiper>
     </>

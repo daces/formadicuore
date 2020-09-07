@@ -2,7 +2,7 @@ import React from "react"
 
 export default function ContactForm (){
     return (
-        
+        <section>
         <form method="post" action="https://getform.io/{your-unique-getform-endpoint}">
         <h1 className="gallery-grid__title ">contattaci</h1>
         <div className="contact_main">
@@ -23,6 +23,7 @@ export default function ContactForm (){
             </div>
         </div>
         </form>
+        </section>
     )
 
 }

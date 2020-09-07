@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 export default function Menu () {
     return (
-        <div className="row">
+        <header className="row">
         <div className="menu">
           <ul className="menu__logo menu__main">
     
@@ -22,8 +22,7 @@ export default function Menu () {
               <li><a href="#testimonials">Testemonials</a></li>
             </ul>
         </div>
-        
-      </div>
+      </header>
       
     )
 }

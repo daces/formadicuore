@@ -3,7 +3,7 @@ import SimpleReactLightbox from 'simple-react-lightbox'
 import { SRLWrapper } from "simple-react-lightbox";
 export default function Gallery(props){
     return (
-        <>
+        <section>
         <h1 className="gallery-grid__title">Fiocchi Nascita</h1>
 
         <SimpleReactLightbox>
@@ -12,58 +12,72 @@ export default function Gallery(props){
           <div className="row">
                 <div className="col-md-6 col-12 gallery__box">
                     <a className="lightbox" href={props.img1.src}>
+                        <figure>
                         <img srcSet={props.img1.srcSet}
                         sizes={props.img1.sizes}
                         src={props.img1.src} alt="awd"/>
+                        </figure>
                     </a>
                 </div>
                 <div className="col-md-6 col-12 gallery__box">
                     <a className="lightbox" href={props.img2.src}>
+                        <figure>
                         <img srcSet={props.img2.srcSet}
                         sizes={props.img2.sizes}
                         src={props.img2.src} alt="awd"/>
+                        </figure>
                     </a>
                 </div>
                 <div className="col-md-4 col-12 gallery__box">
                     <a className="lightbox" href={props.img3.src}>
+                        <figure>
                         <img srcSet={props.img3.srcSet}
                         sizes={props.img3.sizes}
                         src={props.img3.src} alt="awd"/>
+                        </figure>
                     </a>
                 </div>
                 <div className="col-md-4 col-12 gallery__box">
                     <a className="lightbox" href={props.img4.src}>
+                        <figure>
                         <img srcSet={props.img4.srcSet}
                         sizes={props.img4.sizes}
                         src={props.img4.src} alt="awd"/>
+                        </figure>
                     </a>
                 </div>
                 <div className="col-md-4 col-12 gallery__box">
                     <a className="lightbox" href={props.img5.src}>
+                        <figure>
                         <img srcSet={props.img5.srcSet}
                         sizes={props.img5.sizes}
                         src={props.img5.src} alt="awd"/>
+                        </figure>
                     </a>
                 </div>
                 <div className="col-md-6 col-12 gallery__box">
                     <a className="lightbox" href={props.img6.src}>
+                        <figure>
                         <img srcSet={props.img6.srcSet}
                         sizes={props.img6.sizes}
                         src={props.img6.src} alt="awd"/>
+                        </figure>
                     </a>
                 </div>
                 <div className="col-md-6 col-12 gallery__box">
                     <a className="lightbox" href={props.img7.src}>
+                        <figure>
                         <img srcSet={props.img7.srcSet}
                         sizes={props.img7.sizes}
                         src={props.img7.src} alt="awd"/>
+                        </figure>
                     </a>
                 </div>
             </div>
           </SRLWrapper>
           </div>
         </SimpleReactLightbox>
-        </>
+        </section>
     )
 }
 
