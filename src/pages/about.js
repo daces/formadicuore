@@ -31,6 +31,19 @@ query{
     return (
         <>
         <Helmet>
+        </Helmet>
+        <div className="container loremipsum">
+              <Menu/>
+            <div className="row full-height">
+                <div className="row ftc no-gutters">
+                <Intro 
+                    img1={query.img1.childImageSharp.fluid.src} 
+                    img2={query.img2.childImageSharp.fluid.src} 
+                    logo={query.logo.childImageSharp.fluid.src}
+                />
+                </div>
+            </div>
+        </div>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -58,19 +71,6 @@ query{
             window.addEventListener("click", handleClick);`,
           }}
         />
-        </Helmet>
-        <div className="container loremipsum">
-              <Menu/>
-            <div className="row full-height">
-                <div className="row ftc no-gutters">
-                <Intro 
-                    img1={query.img1.childImageSharp.fluid.src} 
-                    img2={query.img2.childImageSharp.fluid.src} 
-                    logo={query.logo.childImageSharp.fluid.src}
-                />
-                </div>
-            </div>
-        </div>
         </>
     )
 }

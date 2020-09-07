@@ -1,10 +1,11 @@
 import React from "react"
 export default function Intro(props){
+//window.addEventListener("click", handleClick);
     return (
         <>
  <div className="col-xs-12 col-sm-12 col-md-7">
-        <div className="showcase">
-          <svg
+        <div className="showcase" >
+          <svg 
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink" width="1272.939" height="1103.442" viewBox="0 0 1272.939 1103.442">
           <defs>

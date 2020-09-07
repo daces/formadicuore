@@ -11,6 +11,7 @@ import ContactForm from "../components/contact-forn"
 import Footer from "../components/footer"
 
 import SEO from "../components/seo"
+import Helmet from "react-helmet"
 // install Swiper components
 SwiperCore.use([Navigation, Pagination]);
 
@@ -126,6 +127,11 @@ function Swiperzi() {
 
   return <>
   <SEO />
+  <Helmet>
+            <script>
+                {``}
+            </script>
+        </Helmet>
 <div className="container full-height loremipsum">
   <Menu/>
   <div className="row full-height">
@@ -172,33 +178,6 @@ function Swiperzi() {
 <div className="container-fluid footer">
   <Footer />
 </div>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            var menu = document.querySelector(".menu__sub");
-            var navigation = document.querySelector(".menu__main");
-            
-            function handleClick(evt) {
-              // Only if a click on a dropdown trigger happens, either close or open it.
-              if (evt.target.hasAttribute("data-dropdown-trigger")) {
-                if (menu.classList.contains("is_hidden")) {
-                  menu.classList.remove("is_hidden");
-                } else {
-                  menu.classList.add("is_hidden");
-                }
-                
-                return;
-              }
-              
-              // If a click happens somewhere outside the dropdown, close it.
-              if (!evt.target.closest(".menu__sub")) {
-                menu.classList.add("is_hidden");
-              }
-            }
-            
-            window.addEventListener("click", handleClick);`,
-          }}
-        />
   </>
 
 }
