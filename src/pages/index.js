@@ -11,7 +11,6 @@ import ContactForm from "../components/contact-forn"
 import Footer from "../components/footer"
 
 import SEO from "../components/seo"
-import Helmet from "react-helmet"
 // install Swiper components
 SwiperCore.use([Navigation, Pagination]);
 
@@ -127,11 +126,6 @@ function Swiperzi() {
 
   return <>
   <SEO />
-  <Helmet>
-            <script>
-                {``}
-            </script>
-        </Helmet>
 <div className="container full-height loremipsum">
   <Menu/>
   <div className="row full-height">

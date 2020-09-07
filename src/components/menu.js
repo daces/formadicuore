@@ -50,7 +50,7 @@ export default function Menu () {
             <ul className="menu__logo menu__sub is_hidden">
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about/">About</Link></li>
-              <li><a href="#testimonials">Testemonials</a></li>
+              <li><a href="/#testimonials">Testemonials</a></li>
             </ul>
             </nav>
         </div>
