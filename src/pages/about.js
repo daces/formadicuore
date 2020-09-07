@@ -2,6 +2,7 @@ import React from "react"
 import Menu from "../components/menu"
 import Intro from "../components/intro"
 import { useStaticQuery, graphql } from "gatsby"
+import Helmet from "react-helmet"
 
 export const squareImage = graphql`
 fragment squareImage on File {
@@ -29,18 +30,7 @@ query{
 `)
     return (
         <>
-        <div className="container loremipsum">
-              <Menu/>
-            <div className="row full-height">
-                <div className="row ftc no-gutters">
-                <Intro 
-                    img1={query.img1.childImageSharp.fluid.src} 
-                    img2={query.img2.childImageSharp.fluid.src} 
-                    logo={query.logo.childImageSharp.fluid.src}
-                />
-                </div>
-            </div>
-        </div>
+        <Helmet>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -68,6 +58,19 @@ query{
             window.addEventListener("click", handleClick);`,
           }}
         />
+        </Helmet>
+        <div className="container loremipsum">
+              <Menu/>
+            <div className="row full-height">
+                <div className="row ftc no-gutters">
+                <Intro 
+                    img1={query.img1.childImageSharp.fluid.src} 
+                    img2={query.img2.childImageSharp.fluid.src} 
+                    logo={query.logo.childImageSharp.fluid.src}
+                />
+                </div>
+            </div>
+        </div>
         </>
     )
 }
